@@ -27,15 +27,13 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+/*if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    //app.UseSwaggerUI();
-     app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("https://fuel-queue-management.herokuapp.com/swagger/index.html", "My API V1");
-    });
-}
+    app.UseSwaggerUI();
+}*/
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
