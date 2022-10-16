@@ -27,7 +27,7 @@ namespace FuelQueueManagement.Services
         User IUserService.Update(string id, User user)
         {
             _users.ReplaceOne(user => user.Id == id, user);
-            return user; 
+            return user;
         }
     }
 }
