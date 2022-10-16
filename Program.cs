@@ -33,7 +33,7 @@ if (app.Environment.IsDevelopment())
     //app.UseSwaggerUI();
      app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        c.SwaggerEndpoint("https://fuel-queue-management.herokuapp.com/swagger/index.html", "My API V1");
     });
 }
 
