@@ -17,8 +17,8 @@ builder.Services.AddSingleton<IMongoClient>(s =>
     new MongoClient(builder.Configuration.GetValue<string>("FuelQueueManagementDataBaseSettings:ConnectionString")));
 
 builder.Services.AddScoped<IUserService, UserService>();
-
 builder.Services.AddScoped<IFuelStationService, FuelStationService>();
+builder.Services.AddScoped<IFuelDetailsService, FuelDetailsService>();
 
 
 builder.Services.AddControllers();

@@ -6,7 +6,6 @@ namespace FuelQueueManagement.Services
     {
         FuelStation Create(FuelStation fuelStation);
         FuelStation Update(string id, FuelStation fuelStation);
-
         List<FuelStation> Get();
         FuelStation Get(string id);
     }
