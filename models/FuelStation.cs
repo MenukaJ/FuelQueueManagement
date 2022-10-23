@@ -13,10 +13,8 @@ namespace FuelQueueManagement.models
         [BsonElement("owner")]
         public User Owner { get; set; }
 
-
         [BsonElement("name")]
         public string Name { get; set; } = String.Empty;
-
 
         [BsonElement("contact_no")]
         public string ContactNo { get; set; } = String.Empty;
