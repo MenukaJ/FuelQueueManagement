@@ -25,9 +25,9 @@ namespace FuelQueueManagement.models
         public string AddressLine1 { get; set; } = String.Empty;
 
         [BsonElement("address_line_2")]
-        public string AddressLine2 { get; set; }
+        public string AddressLine2 { get; set; } = String.Empty;
 
         [BsonElement("address_line_3")]
-        public string AddressLine3 { get; set; }
+        public string AddressLine3 { get; set; } = String.Empty;
     }
 }
