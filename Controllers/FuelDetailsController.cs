@@ -49,10 +49,8 @@ namespace FuelQueueManagement.Controllers
             var IsExistFuelDetails = fuelDetailsService.Get(id);
             if (IsExistFuelDetails == null)
                 return NotFound($"Fuel Details with Id = {id} not found");
-
             fuelDetailsService.Update(id, fuelDetails);
             return Ok(fuelDetails);
-
         }
 
         // DELETE api/<FuelDetailsController>/5

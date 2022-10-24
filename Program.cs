@@ -19,6 +19,7 @@ builder.Services.AddSingleton<IMongoClient>(s =>
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IFuelStationService, FuelStationService>();
 builder.Services.AddScoped<IFuelDetailsService, FuelDetailsService>();
+builder.Services.AddScoped<IFuelQueueService, FuelQueueService>();
 
 
 builder.Services.AddControllers();
