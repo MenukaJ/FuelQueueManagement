@@ -9,6 +9,6 @@ namespace FuelQueueManagement.Services
         List<FuelQueue> Get();
         FuelQueue Get(string id);
         void Remove(String id);
-        FuelQueue GetByEmail(string email);
+        List<FuelQueue> GetByEmail(string email);
     }
 }

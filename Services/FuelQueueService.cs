@@ -39,9 +39,9 @@ namespace FuelQueueManagement.Services
             _fuelQueue.DeleteOne(fuelQueue => fuelQueue.Id == id);
         }
 
-        public FuelQueue GetByEmail(string email)
+        public List<FuelQueue> GetByEmail(string email)
         {
-            return _fuelQueue.Find(fuelQueue => fuelQueue.user.Email == email).FirstOrDefault();
+            return _fuelQueue.Find(fuelQueue => fuelQueue.user.Email == email).ToList();
         }
     }
 }

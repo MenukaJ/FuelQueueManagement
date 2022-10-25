@@ -68,12 +68,9 @@ namespace FuelQueueManagement.Controllers
 
         // GET api/<FuelQueueController>/5
         [HttpGet("/email/{email}")]
-        public ActionResult<FuelQueue> GetByEmail(string email)
+        public ActionResult<List<FuelQueue>> GetByEmail(string email)
         {
-            var fuelQueue = fuelQueueService.GetByEmail(email);
-            if (fuelQueue == null)
-                return NotFound($"Fuel Queue with email = {email} not found");
-            return Ok(fuelQueue);
+            return fuelQueueService.GetByEmail(email);
         }
     }
 }
