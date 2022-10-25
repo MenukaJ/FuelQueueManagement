@@ -12,6 +12,6 @@ namespace FuelQueueManagement.Services
 
         List<FuelQueue> GetByFuelStation(string name);
 
-        List<FuelQueue> GetByEmail(string email);
+        FuelQueue GetByEmail(string email);
     }
 }

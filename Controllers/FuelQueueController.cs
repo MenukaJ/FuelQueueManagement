@@ -1,6 +1,7 @@
 ﻿using FuelQueueManagement.models;
 using FuelQueueManagement.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -76,9 +77,18 @@ namespace FuelQueueManagement.Controllers
 
         // GET api/<FuelQueueController>/5
         [HttpGet("/email/{email}")]
-        public ActionResult<List<FuelQueue>> GetByEmail(string email)
+        public ActionResult<FuelQueue> GetByEmail(string email)
         {
-            return fuelQueueService.GetByEmail(email);
+          
+            var IsExistFuelQueue = fuelQueueService.GetByEmail(email);
+            if (IsExistFuelQueue == null)
+                return NotFound($"Fuel Queue with Email = {email} not found");
+
+            List<FuelQueue> fuelQueues = fuelQueueService.GetByFuelStation(IsExistFuelQueue.fuelStation.Name);
+
+            IsExistFuelQueue.Count = fuelQueues.Count();
+
+            return IsExistFuelQueue;
         }
     }
 }

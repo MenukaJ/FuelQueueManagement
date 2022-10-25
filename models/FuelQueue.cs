@@ -27,5 +27,7 @@ namespace FuelQueueManagement.models
 
         [BsonElement("status")]
         public string Status { get; set; } = String.Empty;
+
+        public int Count { get; set; }
     }
 }
