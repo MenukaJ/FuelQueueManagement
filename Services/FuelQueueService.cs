@@ -42,9 +42,13 @@ namespace FuelQueueManagement.Services
 
         List<FuelQueue> IFuelQueueService.GetByFuelStation(string name)
         {
-            
+
             return _fuelQueue.Find(fuelQueue => fuelQueue.fuelStation.Name == name && fuelQueue.Status == "JOINED").ToList();
-            
+
+        }
+        public List<FuelQueue> GetByEmail(string email)
+        {
+            return _fuelQueue.Find(fuelQueue => fuelQueue.user.Email == email).ToList();
         }
     }
 }
