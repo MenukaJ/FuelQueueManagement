@@ -24,6 +24,14 @@ namespace FuelQueueManagement.Controllers
             return fuelQueueService.Get();
         }
 
+        [HttpGet("fuel-station/{name}")]
+        public int GetByFuelQueue(string name)
+        {
+            List<FuelQueue> fuelQueues = fuelQueueService.GetByFuelStation(name);
+            return fuelQueues.Count();
+
+        }
+
         // GET api/<FuelQueueController>/5
         [HttpGet("{id}")]
         public ActionResult<FuelQueue> Get(string id)

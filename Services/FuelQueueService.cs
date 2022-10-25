@@ -1,4 +1,5 @@
 ﻿using FuelQueueManagement.models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace FuelQueueManagement.Services
@@ -37,6 +38,13 @@ namespace FuelQueueManagement.Services
         public void Remove(string id)
         {
             _fuelQueue.DeleteOne(fuelQueue => fuelQueue.Id == id);
+        }
+
+        List<FuelQueue> IFuelQueueService.GetByFuelStation(string name)
+        {
+            
+            return _fuelQueue.Find(fuelQueue => fuelQueue.fuelStation.Name == name && fuelQueue.Status == "JOINED").ToList();
+            
         }
     }
 }

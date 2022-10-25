@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VSWorkspace\\FuelQueueManagement\\FuelQueueManagement.csproj": {}
+    "D:\\SLIIT\\git\\FuelQueueManagement\\FuelQueueManagement.csproj": {}
   },
   "projects": {
-    "D:\\VSWorkspace\\FuelQueueManagement\\FuelQueueManagement.csproj": {
+    "D:\\SLIIT\\git\\FuelQueueManagement\\FuelQueueManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSWorkspace\\FuelQueueManagement\\FuelQueueManagement.csproj",
+        "projectUniqueName": "D:\\SLIIT\\git\\FuelQueueManagement\\FuelQueueManagement.csproj",
         "projectName": "FuelQueueManagement",
-        "projectPath": "D:\\VSWorkspace\\FuelQueueManagement\\FuelQueueManagement.csproj",
-        "packagesPath": "C:\\Users\\Miyuru Wijesinghe\\.nuget\\packages\\",
-        "outputPath": "D:\\VSWorkspace\\FuelQueueManagement\\obj\\",
+        "projectPath": "D:\\SLIIT\\git\\FuelQueueManagement\\FuelQueueManagement.csproj",
+        "packagesPath": "C:\\Users\\Menuka Jayasingha\\.nuget\\packages\\",
+        "outputPath": "D:\\SLIIT\\git\\FuelQueueManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Miyuru Wijesinghe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Menuka Jayasingha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
