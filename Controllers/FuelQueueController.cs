@@ -65,5 +65,15 @@ namespace FuelQueueManagement.Controllers
             fuelQueueService.Remove(id);
             return Ok($"Fuel Queue with Id = {id} deleted");
         }
+
+        // GET api/<FuelQueueController>/5
+        [HttpGet("/email/{email}")]
+        public ActionResult<FuelQueue> GetByEmail(string email)
+        {
+            var fuelQueue = fuelQueueService.GetByEmail(email);
+            if (fuelQueue == null)
+                return NotFound($"Fuel Queue with email = {email} not found");
+            return Ok(fuelQueue);
+        }
     }
 }
