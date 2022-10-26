@@ -37,5 +37,10 @@ namespace FuelQueueManagement.Services
         {
             _fuelDetails.DeleteOne(fuelDetails => fuelDetails.Id == id);
         }
+
+        FuelDetails IFuelDetailsService.GetByFuelStatation(string id)
+        {
+            return _fuelDetails.Find(fuelDetails => fuelDetails.fuelStation.Id == id).FirstOrDefault();
+        }
     }
 }

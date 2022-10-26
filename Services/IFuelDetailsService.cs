@@ -9,5 +9,6 @@ namespace FuelQueueManagement.Services
         List<FuelDetails> Get();
         FuelDetails Get(string id);
         void Remove(String id);
+        FuelDetails GetByFuelStatation(String id);
     }
 }

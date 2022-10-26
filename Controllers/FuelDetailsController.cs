@@ -34,6 +34,15 @@ namespace FuelQueueManagement.Controllers
             return Ok(fuelDetails);
         }
 
+        [HttpGet("fuel-statation/{id}")]
+        public ActionResult<FuelDetails> GetByFuelStatation(string id)
+        {
+            var fuelDetails = fuelDetailsService.GetByFuelStatation(id);
+            if (fuelDetails == null)
+                return NotFound($"Fuel Details with Id = {id} not found");
+            return Ok(fuelDetails);
+        }
+
         // POST api/<FuelDetailsController>
         [HttpPost]
         public ActionResult<FuelDetails> Post([FromBody] FuelDetails fuelDetails)
