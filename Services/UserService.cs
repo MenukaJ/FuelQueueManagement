@@ -1,4 +1,5 @@
 ﻿using FuelQueueManagement.models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace FuelQueueManagement.Services
@@ -24,10 +25,28 @@ namespace FuelQueueManagement.Services
             return _users.Find(user => true).ToList();
         }
 
-        User IUserService.Update(string id, User user)
+
+        public User Get(string id)
+        {
+            return _users.Find(user => user.Id == id).FirstOrDefault();
+        }
+
+        /*public User Update(string id, User user)
         {
             _users.ReplaceOne(user => user.Id == id, user);
             return user;
+        }*/
+
+        public User Update(string id, User user)
+        {
+            _users.ReplaceOne(user => user.Id == id, user);
+            return user;
+        }
+
+
+        public User GetByEmail(string email)
+        {
+            return _users.Find(user => user.Email == email).FirstOrDefault();
         }
     }
 }

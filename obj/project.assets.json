@@ -883,19 +883,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Menuka Jayasingha\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SLIIT\\git\\FuelQueueManagement\\FuelQueueManagement.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\EAD Project\\FuelQueueManagement\\FuelQueueManagement.csproj",
       "projectName": "FuelQueueManagement",
-      "projectPath": "D:\\SLIIT\\git\\FuelQueueManagement\\FuelQueueManagement.csproj",
-      "packagesPath": "C:\\Users\\Menuka Jayasingha\\.nuget\\packages\\",
-      "outputPath": "D:\\SLIIT\\git\\FuelQueueManagement\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\EAD Project\\FuelQueueManagement\\FuelQueueManagement.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\EAD Project\\FuelQueueManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Menuka Jayasingha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

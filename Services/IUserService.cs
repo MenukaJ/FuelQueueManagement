@@ -6,8 +6,9 @@ namespace FuelQueueManagement.Services
     {
         User Create(User user);
         User Update(string id, User user);
-
         List<User> Get();
+        User Get(string id);
+        User GetByEmail(string email);
 
     }
 }
