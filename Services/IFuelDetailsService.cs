@@ -10,5 +10,6 @@ namespace FuelQueueManagement.Services
         FuelDetails Get(string id);
         void Remove(String id);
         FuelDetails GetByFuelStatation(String id);
+        List<FuelDetails> GetByOwnerEmail(string email);
     }
 }
