@@ -8,5 +8,6 @@ namespace FuelQueueManagement.Services
         FuelStation Update(string id, FuelStation fuelStation);
         List<FuelStation> Get();
         FuelStation Get(string id);
+        List<FuelStation> GetByOwnerEmail(string email);
     }
 }

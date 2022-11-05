@@ -34,5 +34,10 @@ namespace FuelQueueManagement.Services
             _fuelStation.ReplaceOne(fuelStation => fuelStation.Id == id, fuelStation);
             return fuelStation;
         }
+
+        public List<FuelStation> GetByOwnerEmail(string email)
+        {
+            return _fuelStation.Find(fuelStation => fuelStation.Owner.Email == email).ToList();
+        }
     }
 }
