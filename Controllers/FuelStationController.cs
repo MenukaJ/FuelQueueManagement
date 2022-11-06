@@ -57,10 +57,13 @@ namespace FuelQueueManagement.Controllers
 
         }
 
-        // DELETE api/<FuelStationController>/5
-       /* [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpGet("owner/{email}")]
+        public ActionResult<FuelStation> GetByOwner(string email)
         {
-        }*/
+            var fuelStation = fuelStationService.GetByOwnerEmail(email);
+            if (fuelStation == null)
+                return NotFound($"Fuel Stations with owner email = {email} not found");
+            return Ok(fuelStation);
+        }
     }
 }
