@@ -42,5 +42,10 @@ namespace FuelQueueManagement.Services
         {
             return _fuelDetails.Find(fuelDetails => fuelDetails.fuelStation.Id == id).FirstOrDefault();
         }
+
+        public List<FuelDetails> GetByOwnerEmail(string email)
+        {
+            return _fuelDetails.Find(fuelDetails => fuelDetails.fuelStation.Owner.Email == email).ToList();
+        }
     }
 }

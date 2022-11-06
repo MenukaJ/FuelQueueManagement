@@ -74,5 +74,14 @@ namespace FuelQueueManagement.Controllers
             fuelDetailsService.Remove(id);
             return Ok($"Fuel Details with Id = {id} deleted");
         }
+
+        [HttpGet("owner/{email}")]
+        public ActionResult<FuelDetails> GetByOwner(string email)
+        {
+            var fuelDetails = fuelDetailsService.GetByOwnerEmail(email);
+            if (fuelDetails == null)
+                return NotFound($"Fuel Details with owner email = {email} not found");
+            return Ok(fuelDetails);
+        }
     }
 }
